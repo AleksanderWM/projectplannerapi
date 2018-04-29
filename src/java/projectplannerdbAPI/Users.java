@@ -44,7 +44,7 @@ public class Users implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "UserID")
-    private Integer userID;
+    private String userID;
     @Column(name = "FirstName")
     private String firstName;
     @Column(name = "SurName")
@@ -63,15 +63,15 @@ public class Users implements Serializable {
     public Users() {
     }
 
-    public Users(Integer userID) {
+    public Users(String userID) {
         this.userID = userID;
     }
 
-    public Integer getUserID() {
+    public String getUserID() {
         return userID;
     }
 
-    public void setUserID(Integer userID) {
+    public void setUserID(String userID) {
         this.userID = userID;
     }
 

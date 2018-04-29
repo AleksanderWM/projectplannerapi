@@ -29,6 +29,9 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(projectplannerdbAPI.AuthenticationEndpoint.class);
+        resources.add(projectplannerdbAPI.AuthenticationFilter.class);
+        resources.add(projectplannerdbAPI.ExampleResource.class);
         resources.add(projectplannerdbAPI.service.ProjectsFacadeREST.class);
         resources.add(projectplannerdbAPI.service.TasksFacadeREST.class);
         resources.add(projectplannerdbAPI.service.UsersFacadeREST.class);
